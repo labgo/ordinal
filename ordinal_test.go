@@ -1,8 +1,6 @@
 package ordinal
 
-import (
-	"testing"
-)
+import "testing"
 
 var suffixTests = []struct {
 	given    int
@@ -41,7 +39,7 @@ var suffixTests = []struct {
 
 func TestOrdinal(t *testing.T) {
 	for _, test := range suffixTests {
-		actual := ordinal.Suffix(test.given)
+		actual := Suffix(test.given)
 		if actual != test.expected {
 			t.Errorf("ordinal.Suffix(%q) => %q, want %q", test.given, actual, test.expected)
 		}
